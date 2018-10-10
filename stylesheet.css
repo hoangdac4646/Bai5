@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+}
+
+.mainpage {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding: 0%;
+}
+
+@media all and (min-width: 940px) {
+
+    .headline {
+        width: 100%;
+        position: absolute;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 96px;
+        z-index: 1;
+    }
+
+    #headline-container {
+        width: 1200px;
+    }
+
+    .headline-logo {
+        height: 100%;
+        width: 150px;
+        padding-right: 10px;
+        padding-left: 10px;
+        float: left
+    }
+
+    .logo {
+        width: auto;
+        height: auto;
+        max-height: 76px;
+        max-width: 130px;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+    }
+
+    .headline-menu {
+        max-height: 100%;
+        max-width: 50%;
+        font-size: 15px;
+        position: relative;
+        display: inline-block;
+        float: right;
+    }
+
+    .headline-menu-items {
+        list-style: none;
+        float: left;
+        max-width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .headline-menu-items li {
+        float: left;
+    }
+
+    .headline-menu-items li a {
+        display: block;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+
+    .headline-menu-items li a:hover {
+        border-bottom: 2.5px solid chartreuse;
+    }
+
+    .slide {
+        height: 700px;
+        background-color: #092c32;
+        background-size: cover;
+        position: relative;
+    }
+
+    .slide-footer {
+        height: 97px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: url("external/ex_home_banner_element.png") repeat-x left;
+    }
+
+    .slide1 {
+        background: url("external/ex_home_banner_1.jpg") no-repeat center top;
+    }
+
+    .slide2 {
+        background: url("external/ex_home_banner_2.jpg") no-repeat center top;
+    }
+
+    .slide3 {
+        background: url("external/ex_home_banner_3.jpg") no-repeat center top;
+    }
+
+    .slide4 {
+        background: url("external/ex_home_banner_4.jpg") no-repeat center top;
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+.slide-banner {
+    height: 700px;
+    width: 100%;
+    display: block;
+}
+
+.slide-banner-content {
+    height: 700px;
+    display: none;
+}
+
+.slide-banner-content img {
+    max-width: 100%;
+    vertical-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+.slide-dot {
+    text-align: center;
+    position: absolute;
+    top: 550px;
+    left: 46%;
+    right: 46%;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
