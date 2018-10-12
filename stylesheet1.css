@@ -3,6 +3,7 @@
 body {
     margin: 0;
 }
+
 .mainpage {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     max-width: 100%;
@@ -102,9 +103,9 @@ body {
 .slide-button {
     background-color: #ffA500;
     color: #ffffff;
-    display: table-cell;
     width: 300px;
     height: 10px;
+    box-shadow: #1a1a1a;
 }
 
 .slide-button:hover

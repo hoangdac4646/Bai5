@@ -10,6 +10,10 @@ body {
     padding: 0%;
 }
 
+a {
+    text-decoration: none;
+}
+
 @media all and (min-width: 940px) {
 
     .headline {
@@ -50,6 +54,7 @@ body {
     .container {
         margin-left: auto;
         margin-right: auto;
+        width: 1200px;
         height: 100%;
     }
 
@@ -81,9 +86,8 @@ body {
         color: #ffffff;
         text-align: center;
         padding: 10px;
-        padding-right: 20px;
         padding-left: 20px;
-        text-decoration: none;
+        padding-right: 20px;
     }
 
     .headline-menu-items li a:hover {
@@ -119,6 +123,239 @@ body {
 
     .slide4 {
         background: url("external/ex_home_banner_4.jpg") no-repeat center top;
+    }
+
+    #slide-caption-container {
+        top: 170px;
+        height: 50%;
+        position: relative;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    #slide-caption-container p {
+        color: #ffffff;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.3em;
+    }
+
+    #slide-caption-container h1 {
+        line-height: 1.3em;
+        margin: 0;
+        padding: 0;
+        font-size: 46px;
+    }
+
+    .gift-chance, .slide-button {
+        border: 1px solid #1d5c8d;
+        background-color: #021426;
+        color: #f7ba17;
+        border-radius: 5px;
+        padding: 10px 15px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    #slide-button-container {
+        top: -200px;
+        text-align: left;
+        position: relative;
+        z-index: 2;
+        height: fit-content;
+    }
+
+    .slide-button {
+        border: none;
+        background-color: #ffA500;
+        color: #ffffff;
+        display: inline-block;
+        width: 300px;
+        height: 100%;
+    }
+
+    .slide-button a {
+        text-decoration: none;
+        color: #ffffff;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide-button:hover {
+        background-color: #f7ba17;
+    }
+
+    .step-sign {
+        height: 110px;
+        width: 100%;
+        position: relative;
+    }
+
+    #step-sign-container {
+        width: 1000px;
+        height: 100%;
+        padding-top: 25px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .step-sign-box {
+        width: 325px;
+        height: 50px;
+        display: inline-block;
+    }
+
+    .step-sign-text {
+        padding: 15px;
+        height: 100%;
+        margin: 0;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #step_1 {
+        background-image: url("external/step1.png");
+    }
+
+    #step_2 {
+        background-image: url("external/step2.png");
+    }
+
+    #step_3 {
+        background-image: url("external/step3.png");
+    }
+
+    .list-company {
+        width: 100%;
+        height: fit-content;
+        margin-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        background-color: #f8f8ff;
+    }
+
+    #title-container {
+        text-align: center;
+    }
+
+    .list-company-panel {
+        width: 100%;
+        position: relative;
+        height: fit-content;
+        display: table;
+        padding: 20px;
+
+    }
+
+    .list-company-panel-items {
+        list-style: none;
+        height: 100%;
+        padding: 0;
+    }
+
+    .list-company-panel-items li {
+        float: left;
+        position: relative;
+    }
+
+    .list-company-panel-items li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .logo-container {
+        height: 76px;
+        width: 130px;
+        padding: 2px;
+        margin: 6px;
+        display: inline-block;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    .logo-container img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about {
+        background: url("external/ex_home_ve_khao_sat.jpg") no-repeat center top;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .about-box {
+        height: 100%;
+        max-width: 50%;
+        display: inline-block;
+    }
+
+    #about-container {
+        height: fit-content;
+        color: #ffffff;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .partner {
+        width: 100%;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .partner-table {
+        width: 100%;
+        height: fit-content;
+        display: table;
+        border-spacing: 10px;
+        border-collapse: separate;
+    }
+
+    .partner-table td, th {
+        text-align: center;
+        border: 1px solid #d3d3d3;
+        height: 180px;
+        width: 427px;
+        margin-inside: 20px;
+    }
+
+    #partner-container {
+    }
+
+    .partner-table td img {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70%;
+        padding-top: 10px
+    }
+
+    .page-footer {
+        width: 100%;
+        height: 50px;
+        background: #1a1a1a;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        color: #ffffff;
+    }
+
+    .page-footer a:hover {
+        text-decoration: underline;
     }
 }
 
@@ -178,14 +415,14 @@ body {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #717171;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.5s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: #bbb;
 }
 
 /* Fading animation */
@@ -199,7 +436,7 @@ body {
 .slide-dot {
     text-align: center;
     position: absolute;
-    top: 550px;
+    top: 580px;
     left: 46%;
     right: 46%;
 }
