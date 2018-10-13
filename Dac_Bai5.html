@@ -5,44 +5,47 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
         <link type="text/css" rel="stylesheet" href="stylesheet.css" media="all">
         <link type="text/css" rel="icon" href="external/anphabe_icon.ico">
         <title>Khảo sát | NƠI LÀM VIỆC TỐT NHẤT VIỆT NAM</title>
-    </head>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+        <script>
+            var slideIndex = 1;
+            var ctl;
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+            function plusSlides(n) {
+            clearTimeout(ctl);
+            slideIndex+=n;
+            showSlides();
+            }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+            function currentSlide(n) {
+            clearTimeout(ctl);
+            slideIndex = n;
+            showSlides();
+            }
 
-        function showSlides(n) {
+            function showSlides() {
             var i;
             var slides = document.getElementsByClassName("slide-banner-content");
             var dots = document.getElementsByClassName("dot");
 
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            slides[i].style.display = "none";
+            dots[i].className = dots[i].className.replace(" active", "");
+
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
+            if (slideIndex < 1) {slideIndex = slides.length}
+            else if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-        }
-    </script>
+            ctl= setTimeout(function(){slideIndex++;showSlides();},5000);
+            }
+
+        </script>
+    </head>
+
 <body>
 <div class="mainpage">
     <div class="headline">
@@ -72,6 +75,10 @@
                     <h1>VIỆT NAM</h1>
                     <br>
                     <div class="gift-chance">Cơ hội nhận quà trị giá 12,000,000VND</div>
+                    <div class="banner-mobile">
+                        <img src="external/banner-slide-mobile-1.jpg"
+                             width="730" height="700" class="img-responsive">
+                    </div>
                 </div>
             </div>
 
@@ -82,6 +89,10 @@
                     <h1>12,000,000VND</h1>
                     <br>
                     <div class="gift-chance">Thẻ tập 1 năm tại California & Yoga</div>
+                    <div class="banner-mobile">
+                        <img src="external/banner-slide-mobile-2.jpg"
+                             width="730" height="700" class="img-responsive">
+                    </div>
                 </div>
             </div>
 
@@ -99,6 +110,10 @@
                             Tặng 100,000VND vào ví điện tử Payoo
                         </li>
                     </ul>
+                    <div class="banner-mobile">
+                        <img src="external/banner-slide-mobile-3.jpg"
+                             width="730" height="700" class="img-responsive">
+                    </div>
                 </div>
             </div>
 
@@ -116,12 +131,6 @@
                     <div class="slide-button"><b>KHẢO SÁT ĐÃ KẾT THÚC</b></div>
                 </a>
             </div>
-
-            <script>
-                showSlides(1)
-                setTimeout(showSlides, 2000);
-            </script>
-
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <div class="slide-dot">
@@ -130,6 +139,11 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
             </div>
+            <script>
+                showSlides();
+            </script>
+
+
         </div>
         <div class="slide-footer"></div>
     </div>
